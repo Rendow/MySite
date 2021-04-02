@@ -1,19 +1,23 @@
-.mainBlock {
+.skillsBlock {
     height: 100vh;
-    background: #bda0f6;
+    background: #9ae568;
 
 }
-
-
-.text {
-    width: 300px;
-    background: #e6d7fc;
-
+.title{
+    background: #b1e992;
+    font-size: 1.5em;
 }
 
-.img {
-    width: 300px;
-    height: 400px;
-    background: #e6d7fc;
+.skillsContainer{
+    flex-direction:column;
+    justify-content: flex-start;
 
+
+}
+.skills{
+    border: 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

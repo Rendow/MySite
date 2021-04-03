@@ -12,7 +12,7 @@ function Skill(props: SkillPropsType) {
         <div className={s.skill}>
 
             <div className={s.icon}> </div>
-            <div>
+            <div className={s.textWrap}>
                 <h3> {props.title}</h3>
             </div>
             <div className={s.text}>{props.description} </div>

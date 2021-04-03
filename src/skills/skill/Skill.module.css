@@ -1,13 +1,27 @@
 .skill {
     background: #d7d7d7;
     width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
+
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
+    align-items:center ;
+}
+.skill h3{
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 8px;
 }
 
 .icon {
+    margin: 10px;
     background: #282c34;
     width: 60px;
     height: 60px;
+}
+.textWrap {
+align-items: flex-end;
 }

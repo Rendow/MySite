@@ -1,21 +1,20 @@
 import React from 'react';
-import s from './Main.module.css';
+import s from './Hire.module.css';
 import Container from '../common/styles/Container.module.css';
 
-function Main() {
+function Hire() {
     return (
         <div className={s.mainBlock}>
             <div className={Container.container}>
                 <div className={s.text}>
-                    <span> Hello There!</span>
-                    <h1>I am Ivan Haydin </h1>
-                    <p><em>React frontend developer</em> from Saint-Petersburg</p>
+                    <h2>I am Ivan Haydin </h2>
                 </div>
-                <div className={s.img}></div>
+                <button></button>
             </div>
+
 
         </div>
     );
 }
 
-export default Main;
+export default Hire;

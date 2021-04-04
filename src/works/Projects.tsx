@@ -4,12 +4,12 @@ import Container from '../common/styles/Container.module.css';
 import Project from "./work/Project";
 
 function Projects() {
-    let contClass = Container.container + ' ' + s.skillsContainer
+    let contClass = Container.container + ' ' + s.projectsContainer
     return (
-        <div className={s.skillsBlock}>
+        <div className={s.projectsBlock}>
             <div className={contClass}>
                 <h2 className={s.title}> My Projects</h2>
-                <div className={s.skills}>
+                <div className={s.projects}>
 
                     <Project title={'todolist'} description={'  Lorem ipsum dolor sit aur'}/>
                     <Project title={'social network'} description={'  beatae consectetur deleniti,  molestiae porro quibusdam quod rem tempora temporibus velit voluptates, voluptatum.\n'}/>

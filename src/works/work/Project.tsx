@@ -9,7 +9,7 @@ type SkillPropsType = {
 
 function Project(props: SkillPropsType) {
     return (
-        <div className={s.skill}>
+        <div className={s.project}>
 
             <div className={s.icon}>
                 <a href=""> Look</a>

@@ -1,13 +1,15 @@
 .mainBlock {
     height: 100vh;
     background: #bda0f6;
-
 }
-
+.addMargin{
+    margin-top: 80px;
+}
 
 .text {
     width: 300px;
     background: #e6d7fc;
+   margin-top: 80px;
 
 }
 .text span{

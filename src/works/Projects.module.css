@@ -1,23 +1,25 @@
-.skillsBlock {
+.projectsBlock {
     min-height: 100vh;
     background: #7f56dd;
+    display: flex;
+    align-items: center;
 }
 .title{
     background: #bda0f6;
     font-size: 1.5em;
 }
 
-.skillsContainer{
+.projectsContainer{
     flex-direction:column;
     justify-content: flex-start;
     padding: 10px 0;
 }
-.skillsContainer h2{
+.projectsContainer h2{
     padding: 10px 0;
 }
 
 
-.skills{
+.projects{
     border: 1px solid;
     width: 100%;
 

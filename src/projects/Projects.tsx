@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Projects.module.css';
 import Container from '../common/styles/Container.module.css';
-import Project from "./work/Project";
+import Project from "./project/Project";
 
 function Projects() {
     let contClass = Container.container + ' ' + s.projectsContainer

@@ -4,15 +4,11 @@ import Container from '../common/styles/Container.module.css';
 
 function Hire() {
     return (
-        <div className={s.mainBlock}>
-            <div className={Container.container}>
-                <div className={s.text}>
-                    <h2>I am Ivan Haydin </h2>
-                </div>
-                <button></button>
+        <div className={s.wrap}>
+            <div className={`${Container.container} ${s.main}`}>
+                    <h2 className={s.text}> Considering options for remote work </h2>
+                <a href="" className={s.link}> Hire me</a>
             </div>
-
-
         </div>
     );
 }

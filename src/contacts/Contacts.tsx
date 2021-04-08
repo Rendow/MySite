@@ -4,16 +4,16 @@ import Container from '../common/styles/Container.module.css';
 
 function Contacts() {
     return (
-        <div className={s.mainBlock}>
-            <div className={Container.container}>
-                <div className={s.text}>
-                    <span> Hello There!</span>
-                    <h1>I am Ivan Haydin </h1>
-                    <p> React frontend developer from Saint-Petersburg</p>
-                </div>
-                <div className={s.img}></div>
+        <div className={s.wrap}>
+            <div className={`${Container.container} ${s.main}`}>
+                <h2 className={s.text}> Contacts </h2>
+                <form className={s.form} action="">
+                    <input className={s.input} type="text"/>
+                    <input  className={s.input} type="text"/>
+                    <textarea className={s.textarea} name="" id="" > </textarea>
+                </form>
+                <button className={s.button}> Send</button>
             </div>
-
         </div>
     );
 }

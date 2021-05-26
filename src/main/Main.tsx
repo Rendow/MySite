@@ -8,7 +8,7 @@ function Main() {
             <div className={`${Container.container} ${s.addMargin}`}>
                 <div className={s.text}>
                     <span> Hello There!</span>
-                    <h1>I am Ivan Haydin </h1>
+                    <h1>I am Ivan </h1>
                     <p><em>React frontend developer</em> from Saint-Petersburg</p>
                 </div>
                 <div className={s.img}></div>

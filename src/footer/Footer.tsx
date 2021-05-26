@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className={s.wrap}>
             <div className={`${Container.container} ${s.main}`}>
-                <h2 className={s.text}> Ivan Haydin </h2>
+                <h2 className={s.text}> Ivan  </h2>
                 <div className={s.links}>
                     <div className={s.link}></div>
                     <div className={s.link}></div>

@@ -1,12 +1,13 @@
 .wrap {
     background: #ec6a87;
-    min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .main {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid;
@@ -23,6 +24,7 @@
 
 .form {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     height: 150px;
@@ -48,4 +50,13 @@
     color: black;
     padding: 5px;
     box-shadow: 4px 4px #bda0f6;
+}
+@media screen and (min-width: 700px) {
+    .main {
+        height: 100%;
+    }
+    .form {
+        height: 200px;
+        max-width: 950px;
+    }
 }

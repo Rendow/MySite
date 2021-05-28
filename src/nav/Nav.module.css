@@ -6,3 +6,6 @@
 .nav a{
    text-decoration: unset;
 }
+.nav a:visited{
+    color: unset;
+}

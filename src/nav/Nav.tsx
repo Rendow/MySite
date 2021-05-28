@@ -1,15 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import s from './Nav.module.css';
 
 function Nav() {
     return (
-        <div className={s.nav}>
-            <a href="">Main</a>
-            <a href="">Projects</a>
-            <a href="">Skills</a>
-            <a href="">Contacts</a>
-
-        </div>
+        <nav className={s.nav}>
+            <NavLink to='/main'>Main</NavLink>
+            <NavLink to='/projects'>Projects</NavLink>
+            <NavLink to='/skills'>Skills</NavLink>
+            <NavLink to='/contacts'>Contacts</NavLink>
+        </nav>
     );
 }
 

@@ -39,7 +39,7 @@
 }
 
 .textarea {
-    height: 45px;
+    height: 65px;
     border: 1px solid;
 }
 
@@ -51,12 +51,13 @@
     padding: 5px;
     box-shadow: 4px 4px #bda0f6;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 400px) {
     .main {
         height: 100%;
     }
     .form {
-        height: 200px;
-        max-width: 950px;
+
+        width: 100%;
+        max-width: 800px;
     }
 }

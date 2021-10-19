@@ -7,6 +7,7 @@ import Projects from "./projects/Projects";
 import Hire from "./hire/Hire";
 import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
+import './styles.scss'
 
 function App() {
     return (

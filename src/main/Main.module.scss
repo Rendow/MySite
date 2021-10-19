@@ -1,0 +1,38 @@
+@import '../common/styles/variables';
+@import '../common/styles/mixins';
+
+
+.mainBlock {
+  @include text();
+  height: 100vh;
+  background: $secondBackgroundColor;
+
+  .addMargin {
+    @include container ();
+
+    .text {
+      width: 300px;
+      background: #e6d7fc;
+      margin-top: 80px;
+
+      & span {
+        color: navy;
+        font-size: 24px;
+      }
+
+    }
+
+    .img {
+      width: 300px;
+      height: 400px;
+      background: #e6d7fc;
+
+    }
+  }
+
+}
+
+
+
+
+

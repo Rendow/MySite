@@ -1,0 +1,54 @@
+@import './src/common/styles/variables';
+@import './src/common/styles/mixins';
+
+
+.project {
+    width: 200px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.17);
+
+    margin: 10px;
+    border: 1px solid;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .icon {
+        width: 100%;
+        height: 180px;
+        position: relative;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            @include absolut();
+        }
+        &:hover {
+          //  box-shadow: 3px 3px rgba(55, 89, 131, 0.48);
+        }
+    }
+    .textWrap {
+        margin-top: 10px;
+        color: white;
+
+        .projectTitle {
+            @include text('Josefin Sans', 18px ,1.2);
+            letter-spacing: 1px;
+            margin: 0 0 5px;
+        }
+
+        .projectDescr {
+            @include text('Poppins', 12px ,1.8);
+            font-weight: 400;
+        }
+    }
+}
+

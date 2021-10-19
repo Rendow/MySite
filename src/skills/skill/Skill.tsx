@@ -10,7 +10,6 @@ type SkillPropsType = {
 function Skill(props: SkillPropsType) {
     return (
         <div className={s.skill}>
-
             <div className={s.icon}> </div>
             <div className={s.textWrap}>
                 <h3> {props.title}</h3>

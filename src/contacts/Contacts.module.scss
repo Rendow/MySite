@@ -1,0 +1,115 @@
+@import '../common/styles/variables';
+@import '../common/styles/mixins';
+
+
+.wrap {
+  background: $secondBackgroundColor;
+
+  font-family: 'Josefin Sans', sans-serif;
+
+  .main {
+    @include container();
+    flex-direction: column;
+    justify-content: normal;
+
+    height: 400px;
+
+    .form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 600px;
+
+      input:nth-child(3) {
+        width: 100%;
+      }
+
+      input {
+        width: 290px;
+        height: 50px;
+        padding: 6px 15px;
+        border: none;
+        background-color: rgba(51, 51, 51, .5) !important;
+        margin: 5px 10px 5px 0;
+        color: #ffffffff;
+        @media screen and (max-width: 754px) {
+          width: 100%;
+          margin: 5px 10px 5px 10px;
+        }
+      }
+
+      textarea {
+        height: 100px;
+        width: 600px;
+        margin: 5px 10px 5px 0;
+        padding: 6px 15px;
+        color: #ffffffff;
+        background: rgba(51, 51, 51, .5);
+        resize: none;
+        border: none;
+        @media screen and (max-width: 754px) {
+          width: 100%;
+          margin: 5px 10px 5px 10px;
+        }
+      }
+
+      textarea::placeholder,
+      input::placeholder {
+        color: #ffffffff;
+      }
+
+      .btn {
+        width: 50%;
+        border: none;
+        background: rgba(51, 51, 51, .5);
+        color: #ffffffff;
+        margin: 5px 0;
+        height: 50px;
+        font-weight: 800;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 50%;
+          height: 10px;
+          bottom: -6px;
+          left: 75px;
+          z-index: -2;
+          transition: all 0.3s ease-in-out 0s;
+          background: $primaryColor;
+        }
+
+        &:hover {
+          text-decoration: none;
+          &::after {
+            width: 50%;
+            height: 90%;
+            transition: all 0.3s ease-in-out 0s;
+
+          }
+        }
+      }
+
+      @media screen and (max-width: 754px) {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+  }
+}
+
+
+
+@media screen and (min-width: 400px) {
+  .main {
+    height: 100%;
+  }
+  .form {
+
+    width: 100%;
+    max-width: 800px;
+  }
+}

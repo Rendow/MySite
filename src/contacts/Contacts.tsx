@@ -1,21 +1,25 @@
 import React from 'react';
-import s from './Contacts.module.css';
-import Container from '../common/styles/Container.module.css';
+import s from './Contacts.module.scss';
+import {Title} from "../common/components/Title";
 
 function Contacts() {
     return (
         <div className={s.wrap}>
-            <div className={`${Container.container} ${s.main}`}>
-                <h2 className={s.text}> Contacts </h2>
+
+            <div className={s.main}>
+                    <Title title={'Contacts'} />
                 <form className={s.form} action="">
-                    <input className={s.input} type="text"/>
-                    <input  className={s.input} type="text"/>
-                    <textarea className={s.textarea} name="" id="" > </textarea>
+                    <input required placeholder='Name' name='name'/>
+                    <input required placeholder='Surname' name='lastname'/>
+                    <input required placeholder='Email' name='email'/>
+                    <textarea required placeholder='Message' name='message'/>
+                    <button type={'submit'} className={s.btn}> Send message</button>
                 </form>
-                <button className={s.button}> Send</button>
+
             </div>
         </div>
     );
 }
+
 
 export default Contacts;

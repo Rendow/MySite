@@ -1,25 +1,23 @@
 import React from 'react';
-import s from './Project.module.css';
+import s from './Project.module.scss';
 
 
-type SkillPropsType = {
+type ProjectPropsType = {
     title: string
     description: string
+   style:{ backgroundImage:string}
 }
 
-function Project(props: SkillPropsType) {
+function Project(props: ProjectPropsType) {
+
     return (
         <div className={s.project}>
-
-            <div className={s.icon}>
-                <a href=""> Look</a>
-            </div>
+            <a style={props.style} className={s.icon} href=""/>
             <div className={s.textWrap}>
-                <div>
-                    <h3> {props.title}</h3>
-                </div>
-
-                <div>
+                <span className={s.projectTitle}>
+                   {props.title}
+                </span>
+                <div className={s.projectDescr}>
                     {props.description}
                 </div>
             </div>

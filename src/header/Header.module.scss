@@ -1,11 +1,16 @@
+@import '../common/styles/variables';
+
 .header{
     height: 60px;
-    background: #81dde0;
+    background:$backgroundColor;
+
     display: flex;
     align-items:center ;
     justify-content: flex-end;
+
     top: 0;
     right: 0;
     left: 0;
     position: fixed;
+    z-index: 3;
 }

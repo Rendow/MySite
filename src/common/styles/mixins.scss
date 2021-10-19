@@ -1,0 +1,36 @@
+@import './variables';
+
+@mixin text ($font-family,$font-size,  $line-height) {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  line-height:  $line-height;
+  color: $textColor;
+}
+
+@mixin flexCenter ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin absolut () {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+@mixin container () {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 100%;
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+@import '../common/styles/variables';
+@import '../common/styles/mixins';
+
+
+.projectsBlock {
+
+    background: $secondBackgroundColor;
+    display: flex;
+    align-items: center;
+
+    .projectsContainer {
+        @include container ();
+
+        flex-direction:column;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .projects {
+            border: 1px solid;
+            width: 100%;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+
+

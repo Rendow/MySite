@@ -6,18 +6,17 @@
     background: $backgroundColor;
     display: flex;
     align-items: center;
+    padding-top: 30px;
     .main {
         @include container ();
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border: 1px solid;
         height: 200px;
         .text {
             margin: 15px 0 0;
         }
         .links {
-            border: 1px solid;
             display: flex;
             justify-content: space-between;
             width: 280px;

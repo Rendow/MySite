@@ -4,10 +4,9 @@
 
 .project {
     width: 200px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.17);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 
     margin: 10px;
-    border: 1px solid;
 
     display: flex;
     justify-content: flex-start;
@@ -38,6 +37,7 @@
     .textWrap {
         margin-top: 10px;
         color: white;
+        padding: 10px;
 
         .projectTitle {
             @include text('Josefin Sans', 18px ,1.2);

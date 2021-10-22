@@ -4,7 +4,7 @@
 
 .projectsBlock {
     padding-top: 30px;
-
+    min-height: 70vh;
     background: $secondBackgroundColor;
     display: flex;
     align-items: center;
@@ -13,7 +13,6 @@
         @include container ();
 
         flex-direction:column;
-        justify-content: space-between;
         padding: 10px 0;
 
         .projects {

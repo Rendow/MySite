@@ -2,85 +2,30 @@
 @import '../common/styles/mixins';
 
 
-//.main {
-//  @include text($secondFontFamily, 20px, 2px);
-//  height: 100vh;
-//  background: $secondBackgroundColor;
-//  display: flex;
-//  justify-content: space-around;
-//  align-items: center;
-//  flex-wrap: wrap;
-//
-//  .wrap {
-//    //@include container();
-//    width: 80%;
-//    max-width: 1500px;
-//
-//    display: flex;
-//    justify-content: space-between;
-//    align-items: center;
-//    flex-wrap: wrap;
-//    .greeting {
-//      display: flex;
-//      flex-direction: column;
-//      justify-content: flex-start;
-//      align-items: flex-start;
-//      flex-wrap: nowrap;
-//      flex-shrink: unset;
-//
-//      .name {
-//        @include text($titleFontFamily, 40px, 2px);
-//
-//        span {
-//          display: inline-block;
-//          position: relative;
-//          z-index: 0;
-//
-//          &::before {
-//            content: '';
-//            position: absolute;
-//            width: 100%;
-//            height: 20px;
-//            bottom: -6px;
-//            left: 75px;
-//            z-index: -2;
-//            transition: all 0.3s ease-in-out 0s;
-//            background: $primaryColor;
-//          }
-//
-//        }
-//      }
-//
-//
-//    }
-//    .img {
-//      width: 300px;
-//      height: 400px;
-//      background: #e6d7fc;
-//
-//    }
-//  }
-//}
-//
-
-
 
 .main {
-  @include text($secondFontFamily, 20px,1);
+  @include text($secondFontFamily, 26px,1);
   height: 100vh;
   background: $secondBackgroundColor;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  .particlesWrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+   opacity: 0.8;
+  }
 
   .wrap {
-    //@include container();
-    width: 80%;
-    max-width: 1500px;
+    width: 90%;
+    max-width: 1000px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     .greeting {
@@ -92,7 +37,7 @@
       flex-shrink: unset;
 
       .name {
-        @include text($titleFontFamily, 40px, 2);
+        @include text($titleFontFamily, 55px, 2);
 
         span {
           display: inline-block;
@@ -102,11 +47,10 @@
           &::before {
             content: '';
             position: absolute;
-            width: 120%;
+            width: 105%;
             height: 20px;
-            bottom: 15px;
-            z-index: -2;
-            transition: all 0.3s ease-in-out 0s;
+            bottom: 25px;
+            z-index: -1;
             background: $primaryColor;
           }
 
@@ -115,12 +59,32 @@
 
 
     }
-    .img {
-      width: 300px;
-      height: 400px;
-      background: #e6d7fc;
 
+    .photo {
+      position: relative;
+      z-index: 1;
+      @media screen and (max-width: 800px) {
+        margin-top: 50px;
+      }
+      .img {
+        width: 300px;
+        height: 400px;
+        background: url("../assets/img/photo.jpg") no-repeat;
+        background-size:cover ;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 105%;
+          height: 110%;
+          left: 13px;
+          top: -19px;
+          z-index: -1;
+          border:5px solid $primaryColor;
+        }
+      }
     }
+
   }
 }
 

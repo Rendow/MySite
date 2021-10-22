@@ -6,22 +6,25 @@
     display: flex;
     align-items: center;
     background: $backgroundColor;
-    padding-top: 30px;
+    padding: 30px;
+    min-height: 70vh;
 
     .skillsContainer{
         @include container ();
-        display: flex;
         flex-direction:column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
 
         padding: 10px 0;
+        .icon {
+
+            width: 60px;
+            height: 60px;
+            transform: rotate(-45deg);
+        }
     }
     .skills{
-        border: 1px solid;
         width: 100%;
         align-self: center;
-
 
 
         display: flex;

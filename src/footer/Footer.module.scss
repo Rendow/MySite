@@ -3,16 +3,18 @@
 
 
 .wrap {
-    background: $backgroundColor;
+    background: $secondBackgroundColor;
     display: flex;
     align-items: center;
     padding-top: 30px;
+
     .main {
         @include container ();
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 200px;
+        padding-bottom: 20px;
         .text {
             margin: 15px 0 0;
         }
@@ -25,6 +27,9 @@
                 height: 50px;
                 color: white
             }
+        }
+        p{
+            @include text($secondFontFamily,10px,1)
         }
     }
 }

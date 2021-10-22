@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Title.module.scss';
 
 type TitleType = {
-    title:string
+    title:string | JSX.Element
 }
 
 export function Title(props:TitleType) {

@@ -3,16 +3,19 @@
 
 
 .wrap {
-  background: $secondBackgroundColor;
-  padding-top: 30px;
-  font-family: 'Josefin Sans', sans-serif;
+  background: $backgroundColor;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 67vh;
+  padding: 40px 0;
 
   .main {
     @include container();
     flex-direction: column;
-    justify-content: normal;
+    justify-content: space-between;
 
-    height: 400px;
+    min-height: 400px;
 
     .form {
       display: flex;
@@ -55,7 +58,7 @@
 
       textarea::placeholder,
       input::placeholder {
-        color: #ffffffff;
+        color: rgba(255, 255, 255, 0.51);
       }
 
       .btn {
@@ -104,13 +107,3 @@
 }
 
 
-//@media screen and (min-width: 400px) {
-//  .main {
-//    height: 100%;
-//  }
-//  .form {
-//
-//    width: 100%;
-//    max-width: 800px;
-//  }
-//}

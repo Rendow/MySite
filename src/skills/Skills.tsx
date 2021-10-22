@@ -1,23 +1,36 @@
 import React from 'react';
 import s from './Skills.module.scss';
-import Container from '../common/styles/Container.module.css';
 import Skill from "./skill/Skill";
 import {Title} from "../common/components/Title";
+import {FaReact} from "react-icons/fa";
+import {DiJavascript, DiSass} from 'react-icons/di';
+import {BsCodeSlash} from 'react-icons/bs';
+// @ts-ignore
+import Fade from "react-reveal/Fade";
+// @ts-ignore
+import ReactTypingEffect from 'react-typing-effect';
 
 function Skills() {
     return (
-        <div className={s.skillsBlock}>
+        <section id={'skills'} className={s.skillsBlock}>
             <div className={s.skillsContainer}>
-                <Title title={'Skills'}/>
-                <div className={s.skills}>
-                    <Skill title={'js'} description={'  Lorem ipsum dolor sit aur'}/>
-                    <Skill title={'ts'} description={'  beatae consectetur deleniti,  molestiae porro quibusdam quod rem tempora temporibus velit voluptates, voluptatum.\n'}/>
-                    <Skill title={'react'} description={'met, consectetur adipisicing elit. Aperiam aspernat'}/>
-                    <Skill title={'css'} description={'eius expedita explicabo fugiat in iste magnam'}/>
-                </div>
+                <Fade bottom reset={true}>
+
+                    <Title title={ <ReactTypingEffect text={'My Skills'}/>}/>
+                    <div className={s.skills}>
+                        <Skill icon={<DiJavascript className={s.icon}/>} title={'javascript'}
+                               description={'  Lorem ipsum dolor sit aur'}/>
+                        <Skill icon={<FaReact className={s.icon}/>} title={'react'}
+                               description={'met, consectetur adipisicing elit. Aperiam aspernat'}/>
+                        <Skill icon={<BsCodeSlash className={s.icon}/>} title={'typescript'}
+                               description={'  beatae consectetur deleniti,  molestiae porro quibusdam quod rem tempora temporibus velit voluptates, voluptatum.\n'}/>
+                        <Skill icon={<DiSass className={s.icon}/>} title={'sass'}
+                               description={'eius expedita explicabo fugiat in iste magnam'}/>
+                    </div>
+                    </Fade>
             </div>
-        </div>
-    );
+        </section>
+);
 }
 
 export default Skills;

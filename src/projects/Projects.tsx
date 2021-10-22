@@ -6,9 +6,10 @@ import {Title} from "../common/components/Title";
 import socialImg from '../assets/img/soc2.png'
 import todoImg from '../assets/img/to-do-list.png'
 import exchangeImg from '../assets/img/exc.png'
+// @ts-ignore
+import Fade from "react-reveal/Fade";
 
 function Projects() {
-
     const exchange = {
         backgroundImage:`url(${exchangeImg})`
     }
@@ -20,7 +21,8 @@ function Projects() {
     }
 
     return (
-        <div className={s.projectsBlock}>
+        <section id={'projects'} className={s.projectsBlock}>
+            <Fade bottom reset={true}>
             <div className={s.projectsContainer}>
                 <Title title={'My Projects'}/>
 
@@ -31,7 +33,8 @@ function Projects() {
                 </div>
 
             </div>
-        </div>
+                </Fade>
+        </section>
     );
 }
 

@@ -4,7 +4,7 @@
 
 .project {
     width: 200px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+   // box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 
     margin: 10px;
 
@@ -48,6 +48,7 @@
         .projectDescr {
             @include text('Poppins', 12px ,1.8);
             font-weight: 400;
+            margin-top: 15px;
         }
     }
 }

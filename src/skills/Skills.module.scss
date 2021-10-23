@@ -3,6 +3,9 @@
 
 
 .skillsBlock {
+    @media screen and (max-width: 400px) {
+        padding-top: 60px;
+    }
     display: flex;
     align-items: center;
     background: $backgroundColor;
@@ -15,22 +18,22 @@
         justify-content: space-between;
 
         padding: 10px 0;
-        .icon {
-
-            width: 60px;
-            height: 60px;
-            transform: rotate(-45deg);
+        .skills{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            .icon {
+                width: 60px;
+                height: 60px;
+                transform: rotate(-45deg);
+            }
         }
-    }
-    .skills{
-        width: 100%;
-        align-self: center;
 
 
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
     }
+
 
 }
 

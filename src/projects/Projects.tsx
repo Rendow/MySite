@@ -11,13 +11,17 @@ import Fade from "react-reveal/Fade";
 
 function Projects() {
     const exchange = {
-        backgroundImage:`url(${exchangeImg})`
+        backgroundImage:`url(${exchangeImg})`,
+        filter: 'invert(100%)',
+        width:'145px'
     }
     const social = {
         backgroundImage:`url(${socialImg})`
     }
     const todo = {
-        backgroundImage:`url(${todoImg})`
+        backgroundImage:`url(${todoImg})`,
+        filter: 'invert(100%)',
+        width:'145px'
     }
 
     return (

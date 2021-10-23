@@ -4,20 +4,24 @@
 
 
 .main {
+  @media screen and (max-width: 500px) {
+    padding: 140px 0 0 20px;
+  }
+
   @include text($secondFontFamily, 26px,1);
-  height: 100vh;
+  min-height: 100vh;
   background: $secondBackgroundColor;
-  display: flex;
+  display: flex ;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  .particlesWrap{
+
+  .particlesWrap {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-   opacity: 0.8;
   }
 
   .wrap {
@@ -32,9 +36,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: nowrap;
-      flex-shrink: unset;
+      align-items: center;
 
       .name {
         @include text($titleFontFamily, 55px, 2);
@@ -45,6 +47,7 @@
           z-index: 0;
 
           &::before {
+
             content: '';
             position: absolute;
             width: 105%;
@@ -71,8 +74,10 @@
         height: 400px;
         background: url("../assets/img/photo.jpg") no-repeat;
         background-size:cover ;
-
         &::before {
+          @media screen and (max-width: 400px) {
+            left: 0px;
+          }
           content: "";
           position: absolute;
           width: 105%;

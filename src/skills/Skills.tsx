@@ -8,7 +8,7 @@ import {BsCodeSlash} from 'react-icons/bs';
 // @ts-ignore
 import Fade from "react-reveal/Fade";
 // @ts-ignore
-import ReactTypingEffect from 'react-typing-effect';
+import Tilt from 'react-tilt'
 
 function Skills() {
     return (
@@ -16,10 +16,12 @@ function Skills() {
             <div className={s.skillsContainer}>
                 <Fade bottom reset={true}>
 
-                    <Title title={ <ReactTypingEffect text={'My Skills'}/>}/>
+                    <Title title={'My Skills'}/>
                     <div className={s.skills}>
-                        <Skill icon={<DiJavascript className={s.icon}/>} title={'javascript'}
-                               description={'  Lorem ipsum dolor sit aur'}/>
+
+                        <Skill icon={<DiJavascript className={s.icon}/>}
+                               title={'javascript'} description={'  Lorem ipsum dolor sit aur'}/>
+
                         <Skill icon={<FaReact className={s.icon}/>} title={'react'}
                                description={'met, consectetur adipisicing elit. Aperiam aspernat'}/>
                         <Skill icon={<BsCodeSlash className={s.icon}/>} title={'typescript'}
@@ -27,10 +29,10 @@ function Skills() {
                         <Skill icon={<DiSass className={s.icon}/>} title={'sass'}
                                description={'eius expedita explicabo fugiat in iste magnam'}/>
                     </div>
-                    </Fade>
+                </Fade>
             </div>
         </section>
-);
+    );
 }
 
 export default Skills;

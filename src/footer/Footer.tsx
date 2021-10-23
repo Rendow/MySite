@@ -4,6 +4,8 @@ import {BsGithub, BsTelegram, SiCodewars} from "react-icons/all";
 import {AiOutlineLinkedin} from "@react-icons/all-files/ai/AiOutlineLinkedin";
 import {FaFreeCodeCamp} from "@react-icons/all-files/fa/FaFreeCodeCamp";
 import {Title} from "../common/components/Title";
+// @ts-ignore
+import ReactTypingEffect from 'react-typing-effect';
 
 function Footer() {
     return (
@@ -18,7 +20,7 @@ function Footer() {
                     <BsTelegram className={s.link} />
                     <FaFreeCodeCamp className={s.link}/>
                 </div>
-                <p>&#169; all rights not reserved</p>
+                <pre>&#169; <ReactTypingEffect speed={200} text={`all rights not reserved`}/> </pre>
         </div>
         </footer>
     );

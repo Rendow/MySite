@@ -5,7 +5,7 @@ import s from './Project.module.scss';
 type ProjectPropsType = {
     title: string
     description: string
-   style:{ backgroundImage:string}
+    style?:{ backgroundImage:string, filter?:string, width?:string}
 }
 
 function Project(props: ProjectPropsType) {

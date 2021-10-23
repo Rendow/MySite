@@ -1,9 +1,15 @@
 @import '../common/styles/variables';
 
 .header{
+    @media screen and (max-width: 650px) {
+        justify-content: center;
+        padding-right: 0;
+
+    }
+
     height: 60px;
     background:$backgroundColor;
-
+    padding-right: 50px;
     display: flex;
     align-items:center ;
     justify-content: flex-end;

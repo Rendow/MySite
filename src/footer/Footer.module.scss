@@ -28,7 +28,7 @@
                 color: white
             }
         }
-        p{
+        pre{
             @include text($secondFontFamily,10px,1)
         }
     }

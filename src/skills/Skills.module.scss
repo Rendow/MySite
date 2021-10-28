@@ -10,7 +10,7 @@
     align-items: center;
     background: $backgroundColor;
     padding: 30px;
-    min-height: 70vh;
+    min-height: 90vh;
 
     .skillsContainer{
         @include container ();
@@ -18,16 +18,84 @@
         justify-content: space-between;
 
         padding: 10px 0;
-        .skills{
+
+        .wrapper {
             display: flex;
+            flex-direction: row;
             justify-content: space-around;
             flex-wrap: wrap;
             height: 100%;
             width: 100%;
-            .icon {
-                width: 60px;
-                height: 60px;
-                transform: rotate(-45deg);
+
+            .skills {
+            //  border: 1px solid white;
+
+                flex: 1 1 400px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            .aboutMe {
+                @include text($titleFontFamily,14px,2);
+            // border: 1px solid white;
+
+                flex: 1 1 220px;
+                width: 70%;
+                padding: 0 10px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                ul li {
+                     position: relative;
+                     margin-top: 40px;
+                    p{
+                        font-family: $secondFontFamily;
+                        font-size: 12px;
+                        opacity: 0.7;
+                    }
+                    &::before {
+                        @media screen and (max-width: 400px) {
+                            left: -15px;
+                        }
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        left: 15px;
+                        top: 8px;
+                        background: white;
+                    }
+                }
+                .btn {
+                    @media screen and (max-width: 400px) {
+                        width: 65%;
+                    }
+                    @include btn();
+                    background: rgb(12 12 12 / 44%);
+                    margin:40px 0;
+                    width: 45%;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    &::after {
+                        display: none;
+                    }
+                    &:hover {
+                        background: white;
+                        color: black;
+                        &::after {
+                           display: none;
+                        }
+                    }
+                }
             }
         }
 

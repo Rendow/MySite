@@ -5,7 +5,7 @@
 
 .main {
   @media screen and (max-width: 500px) {
-    padding: 140px 0 0 20px;
+    padding-top: 120px;
   }
 
   @include text($secondFontFamily, 26px,1);

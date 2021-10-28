@@ -21,7 +21,7 @@ export const LinkWrapper = ({id}: { id: string }) => {
         activeClass={s.active}
         spy={true}
         smooth={true}
-        offset={5}
+        offset={-31}
         duration={500} to={id}> {title} </Link>
 }
 

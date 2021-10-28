@@ -28,7 +28,7 @@
         align-items: center;
 
         &::before {
-            @include absolut();
+            //@include absolut();
         }
         &:hover {
           //  box-shadow: 3px 3px rgba(55, 89, 131, 0.48);
@@ -51,5 +51,6 @@
             margin-top: 15px;
         }
     }
+
 }
 

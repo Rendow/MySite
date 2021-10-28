@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import { particlesOpt } from '../common/animations/particles';
+import { particlesOptHover} from '../common/animations/particles';
 import s from './Main.module.scss';
 // @ts-ignore
 import Fade from "react-reveal/Fade";
@@ -12,7 +12,7 @@ import Tilt from 'react-tilt'
 function Main() {
     return (
         <main id={'main'} className={s.main}>
-            <Particles className={s.particlesWrap}  params={particlesOpt}/>
+            <Particles className={s.particlesWrap}  params={particlesOptHover}/>
             <Fade reset={true} bottom>
             <div className={s.wrap}>
                 <div className={s.greeting}>

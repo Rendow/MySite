@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Hire.module.scss';
 import Container from '../common/styles/Container.module.css';
-import { Title } from '../common/components/Title';
+import { Title } from '../common/components/Title/Title';
 
 function Hire() {
     return (

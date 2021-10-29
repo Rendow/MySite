@@ -1,29 +1,27 @@
 import React from 'react';
 import s from './Projects.module.scss';
-import Container from '../common/styles/Container.module.css';
 import Project from "./project/Project";
 import {Title} from "../common/components/Title/Title";
 import socialImg from '../assets/img/soc2.png'
-import todoImg from '../assets/img/to-do-list.png'
-import exchangeImg from '../assets/img/exc.png'
+import todoImg from '../assets/img/to-do-list_mod.png'
+import exchangeImg from '../assets/img/exc_mod.png'
 // @ts-ignore
 import Fade from "react-reveal/Fade";
 import Particles from "react-particles-js";
-import {particlesOptClick, particlesOptHover} from "../common/animations/particles";
+import {particlesOptClick} from "../common/animations/particles";
 
 function Projects() {
     const exchange = {
         backgroundImage: `url(${exchangeImg})`,
-        filter: 'invert(100%)',
-        width: '145px'
+        width: '90%',
     }
     const social = {
-        backgroundImage: `url(${socialImg})`
+        backgroundImage: `url(${socialImg})`,
+        filter: 'none',
     }
     const todo = {
         backgroundImage: `url(${todoImg})`,
-        filter: 'invert(100%)',
-        width: '145px'
+        width: '90%',
     }
 
     return (
@@ -39,19 +37,19 @@ function Projects() {
                             href="https://rendow.github.io/TodoList/"
                             style={todo}
                             title={'todolist'}
-                            description={'  Lorem ipsum dolor sit aur'}/>
+                            description={'Include Material UI, Rest API, Thunk, Formik'}/>
 
 
                         <Project href="https://rendow.github.io/ReactSocial/"
                                  style={social}
                                  title={'social network'}
-                                 description={' beatae consectetur deleniti,  dam quod rem tempora tem'}/>
+                                 description={'Include WebSocket, Rest API, Class component, Hooks'}/>
 
                         <Project
                             href={"https://rendow.github.io/CurrencyExchange/"}
                             style={exchange}
                             title={'exchanger'}
-                            description={'met, consectetur adipisicing elit. Aperiam aspernat'}/>
+                            description={'Include React, Redux, TypeScript, Bootstrap element'}/>
                     </div>
 
                 </div>

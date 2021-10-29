@@ -3,54 +3,72 @@
 
 
 .project {
-    width: 200px;
-   // box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+  width: 220px;
+  margin: 10px;
+  padding: 20px;
 
-    margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 35px black;
+
+  .icon {
+    width: 100%;
+    height: 180px;
+    //filter: invert(100%);
+
+    border-radius: 12px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 
-    .icon {
-        width: 100%;
-        height: 180px;
-        position: relative;
-
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &::before {
-            //@include absolut();
-        }
-        &:hover {
-          //  box-shadow: 3px 3px rgba(55, 89, 131, 0.48);
-        }
+    &:hover {
     }
-    .textWrap {
-        margin-top: 10px;
-        color: white;
-        padding: 10px;
 
-        .projectTitle {
-            @include text('Josefin Sans', 18px ,1.2);
-            letter-spacing: 1px;
-            margin: 0 0 5px;
-        }
+    .wrap {
+      opacity: 0;
 
-        .projectDescr {
-            @include text('Poppins', 12px ,1.8);
-            font-weight: 400;
-            margin-top: 15px;
-        }
+      .btn {
+        @include text('Josefin Sans', 18px, 1.2);
+        border: 1px solid white;
+        cursor: pointer;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 46px;
+        width: 160px;
+        padding-top: 13px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
     }
+
+  }
+
+  .textWrap {
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+
+    .projectTitle {
+      @include text('Josefin Sans', 18px, 1.2);
+      letter-spacing: 1px;
+      margin: 0 0 5px;
+    }
+
+    .projectDescr {
+      @include text('Poppins', 12px, 1.8);
+      font-weight: 400;
+      margin-top: 15px;
+    }
+  }
 
 }
 

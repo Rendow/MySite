@@ -12,12 +12,19 @@ type ProjectPropsType = {
 }
 
 function Project(props: ProjectPropsType) {
-
+    const onClickHandler = () => {
+        let win = window.open(props.href, '_blank');
+        win && win.focus();
+    }
     return (
-
         <div className={s.project}>
-            <button className={s.btn}></button>
-            <a style={props.style} className={s.icon} href={props.href}/>
+                <div style={props.style} className={s.icon}>
+                    <div className={s.wrap}>
+                        <a className={s.btn} onClick={onClickHandler}>
+                            DEMO </a>
+                    </div>
+                </div>
+
             <div className={s.textWrap}>
                 <span className={s.projectTitle}>
                    {props.title}

@@ -43,10 +43,7 @@ function Skills() {
                             <ul>
                                 <li>REST API / WebSocket / Axios  <p> For communication with endpoints on back-end</p></li>
                                 <li>GIT / GITHUB<p> Version control made life easier</p></li>
-                                <li>Unit tests
-                                    <p> Created Unit tests</p></li>
-
-
+                                <li>Unit tests<p> Created Unit tests</p></li>
                             </ul>
                             <button  onClick={onClickHandler} className={s.btn}>download cv</button>
                         </div>

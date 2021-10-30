@@ -27,6 +27,7 @@
             height: 100%;
             width: 100%;
             margin-top: 60px;
+
             .skills {
             //  border: 1px solid white;
 
@@ -40,10 +41,8 @@
                     transform: rotate(-45deg);
                 }
             }
-
             .aboutMe {
                 @include text($titleFontFamily,16px,2);
-            // border: 1px solid white;
 
                 flex: 1 1 220px;
                 width: 70%;
@@ -52,37 +51,44 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                @media screen and (max-width: 940px) {
+                    justify-content: flex-start;
+                }
 
-                ul li {
-                     position: relative;
-                     margin-top: 40px;
-                    p{
-                        font-family: $secondFontFamily;
-                        font-size: 14px;
-                        opacity: 0.7;
+                ul {
+                    @media screen and (max-width: 940px) {
+                        margin-bottom: 77px;
                     }
-                    &::before {
-                        @media screen and (max-width: 400px) {
-                            left: -15px;
+
+                    li {
+                        position: relative;
+                        margin-top: 40px;
+
+                        p {
+                            font-family: $secondFontFamily;
+                            font-size: 14px;
+                            opacity: 0.7;
                         }
+
+                        &::before {
+
                         position: absolute;
                         content: '';
                         width: 6px;
                         height: 6px;
                         border-radius: 50%;
-                        left: 15px;
-                        top: 8px;
+                        left: -10%;
+                        top: 11%;
                         background: white;
                     }
-                }
+                }}
                 .btn {
-                    @media screen and (max-width: 400px) {
-                        width: 65%;
-                    }
+
                     @include btn();
+                    min-width: 140px;
+                    max-width: 260px;
                     background: rgb(12 12 12 / 44%);
                     margin:40px 0;
-                    width: 45%;
                     border-radius: 10px;
                     text-transform: uppercase;
                     &::after {

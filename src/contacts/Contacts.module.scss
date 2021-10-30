@@ -64,7 +64,13 @@
       .btn {
         @include btn();
       }
-
+      .btnDisable {
+        @include btn();
+        opacity: 0.6;
+        &::after {
+          position: static;
+        }
+      }
       @media screen and (max-width: 754px) {
         width: 100%;
         justify-content: center;

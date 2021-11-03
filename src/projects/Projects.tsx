@@ -9,6 +9,10 @@ import exchangeImg from '../assets/img/exc_mod.png'
 import Fade from "react-reveal/Fade";
 import Particles from "react-particles-js";
 import {particlesOptClick} from "../common/animations/particles";
+// @ts-ignore
+import FileSaver from "file-saver";
+// @ts-ignore
+import cv from "../assets/resourse/cv.pdf";
 
 function Projects() {
     const exchange = {
@@ -23,7 +27,11 @@ function Projects() {
         backgroundImage: `url(${todoImg})`,
         width: '90%',
     }
-
+    const onClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault()
+        FileSaver.saveAs(
+            cv, "Ivan Vilde.pdf")
+    }
     return (
         <section id={'projects'} className={s.projectsBlock}>
             <Particles className={s.particlesWrap}    params={particlesOptClick} />
@@ -51,6 +59,8 @@ function Projects() {
                             title={'exchanger'}
                             description={'Include React, Redux, TypeScript, Bootstrap element'}/>
                     </div>
+                    <button  onClick={onClickHandler} className={s.btn}>download cv</button>
+
 
                 </div>
             </Fade>

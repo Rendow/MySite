@@ -32,7 +32,7 @@
         }
     }
     .text{
-        @include text($secondFontFamily, 12px, 1.4);
+        @include text($secondFontFamily, 12px, 1.8);
         margin-top: 11px;
     }
 }

@@ -10,14 +10,14 @@
     align-items: center;
     background: $backgroundColor;
     padding: 30px;
-    min-height: 90vh;
+    min-height: 75vh;
 
     .skillsContainer{
         @include container ();
         flex-direction:column;
         justify-content: space-between;
 
-        padding: 10px 0;
+        padding: 75px 10px 10px;
 
         .wrapper {
             display: flex;
@@ -29,9 +29,8 @@
             margin-top: 60px;
 
             .skills {
-            //  border: 1px solid white;
 
-                flex: 1 1 400px;
+                flex: 1 1 250px;
                 display: flex;
                 justify-content: space-around;
                 flex-wrap: wrap;
@@ -82,26 +81,7 @@
                         background: white;
                     }
                 }}
-                .btn {
 
-                    @include btn();
-                    min-width: 140px;
-                    max-width: 260px;
-                    background: rgb(12 12 12 / 44%);
-                    margin:40px 0;
-                    border-radius: 10px;
-                    text-transform: uppercase;
-                    &::after {
-                        display: none;
-                    }
-                    &:hover {
-                        background: white;
-                        color: black;
-                        &::after {
-                           display: none;
-                        }
-                    }
-                }
             }
         }
 

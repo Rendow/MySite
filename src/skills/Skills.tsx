@@ -9,25 +9,19 @@ import {BsCodeSlash} from 'react-icons/bs';
 import Fade from "react-reveal/Fade";
 // @ts-ignore
 import Tilt from 'react-tilt'
-// @ts-ignore
-import FileSaver from "file-saver";
-// @ts-ignore
-import cv from "../assets/resourse/cv.pdf";
+import {FaGitAlt} from "@react-icons/all-files/fa/FaGitAlt";
+import {SiSocketdotio} from 'react-icons/si';
 
 
 function Skills() {
 
-    const onClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-       event.preventDefault()
-        FileSaver.saveAs(
-            cv, "Ivan Vilde.pdf")
-    }
+
     return (
         <section id={'skills'} className={s.skillsBlock}>
             <div className={s.skillsContainer}>
                 <Fade bottom reset={true}>
 
-                    <Title title={'Technology'}/>
+                    <Title  title={'Technology'}/>
                     <div className={s.wrapper}>
                         <div className={s.skills}>
                             <Skill icon={<DiJavascript className={s.icon}/>}
@@ -38,15 +32,14 @@ function Skills() {
                             <Skill icon={<BsCodeSlash className={s.icon}/>} title={'typescript'}
                                    description={'Static types make code more reliable'}/>
                             <Skill icon={<DiSass className={s.icon}/>} title={'design'}
-                                   description={'UI library and power of CSS prepros'}/></div>
-                        <div className={s.aboutMe}>
-                            <ul>
-                                <li>REST API / WebSocket / Axios  <p> For communication with endpoints on back-end</p></li>
-                                <li>GIT / GITHUB<p> Version control made life easier</p></li>
-                                <li>Unit tests<p> Created Unit tests</p></li>
-                            </ul>
-                            <button  onClick={onClickHandler} className={s.btn}>download cv</button>
+                                   description={'UI library and power of CSS prepros'}/>
+                            <Skill icon={<FaGitAlt className={s.icon}/>} title={'GIT / GITHUB'}
+                                   description={'Version control made life easier'}/>
+
+                            <Skill icon={<SiSocketdotio className={s.icon}/>} title={'REST API'}
+                                   description={' As well as WebSocket, Axios. Communication with endpoints on back-end'}/>
                         </div>
+
                     </div>
                 </Fade>
             </div>

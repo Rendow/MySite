@@ -7,13 +7,12 @@
   display: flex;
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
-  min-height: 71vh;
+  min-height: 58vh;
   padding: 40px 0;
 
   .main {
     @include container();
     flex-direction: column;
-    justify-content: space-between;
 
     min-height: 400px;
 

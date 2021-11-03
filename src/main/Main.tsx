@@ -16,9 +16,9 @@ function Main() {
             <Fade reset={true} bottom>
             <div className={s.wrap}>
                 <div className={s.greeting}>
-                    <ReactTypingEffect speed={200} text={'Hello There!'}/>
+                    <ReactTypingEffect speed={100} text={'Hello There!'}/>
                     <span className={s.name}> I am Ivan  <span> Vilde</span></span>
-                    <span> React frontend developer</span>
+                    <span> Frontend developer</span>
                 </div>
                 <Tilt options={{max :10 }}>
                 <div className={s.photo}>

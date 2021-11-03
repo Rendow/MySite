@@ -34,6 +34,27 @@
                 display: block;
             }
         }
+        .btn {
+            @include btn();
+            font-family: 'Josefin Sans', sans-serif;
+            min-width: 140px;
+            max-width: 260px;
+            background: rgb(12 12 12 / 44%);
+            margin:60px 0 40px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            &::after {
+                display: none;
+            }
+            &:hover {
+                background: white;
+                color: black;
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
 }
 

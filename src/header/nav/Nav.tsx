@@ -7,7 +7,7 @@ function Nav() {
     return (
         <nav className={s.nav}>
             <LinkWrapper id={'main'}/>
-            <LinkWrapper id={'skills'}/>
+            <LinkWrapper id={'Technology'}/>
             <LinkWrapper id={'projects'}/>
             <LinkWrapper id={'contacts'}/>
         </nav>

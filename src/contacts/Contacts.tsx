@@ -21,13 +21,13 @@ function Contacts() {
         e.preventDefault()
         setDisableBtn(true)
 
-        const {name, lastname, email, message} = e.currentTarget.elements
+        const {name, email, message} = e.currentTarget.elements
 
         if (validate(email.value)) {
             const response = axios.post('https://smtp--node-server.herokuapp.com/sendEmail'
                 , {
                     name: name.value,
-                    lastname: lastname.value,
+                    //lastname: lastname.value,
                     email: email.value,
                     message: message.value,
                 })
@@ -54,7 +54,7 @@ function Contacts() {
                     <Title title={'Contacts'}/>
                     <form className={s.form} onSubmit={handleSubmit}>
                         <input required placeholder='Name' name='name'/>
-                        <input required placeholder='Surname' name='lastname'/>
+                        {/*<input required placeholder='Surname' name='lastname'/>*/}
                         <input required placeholder='Email' name='email'/>
                         <textarea required placeholder='Message' name='message'/>
                         <button disabled={disableBtn} type={'submit'} className={btnClass}> Send message</button>

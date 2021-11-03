@@ -15,7 +15,7 @@ function Burger() {
         <nav className={s.nav}>
             <div className={ open ? `${ s.navItems } ${ s.show }` : s.navItems }>
                 <LinkWrapper id={'main'}/>
-                <LinkWrapper id={'skills'}/>
+                <LinkWrapper id={'Technology'}/>
                 <LinkWrapper id={'projects'}/>
                 <LinkWrapper id={'contacts'}/>
             </div>

@@ -2,6 +2,8 @@
 @import '../common/styles/mixins';
 
 
+
+
 .projectsBlock {
     padding-top: 30px;
     min-height: 90vh;
@@ -25,11 +27,17 @@
 
         .projects {
             width: 100%;
-            text-transform: capitalize;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 60px;
+            .swiper{
+              max-width: 742px;
+                padding-left: 97px;
+                @media screen and (max-width: 500px) {
+                    padding-left: 30px;
+                }
+            }
             a{
                 display: block;
             }

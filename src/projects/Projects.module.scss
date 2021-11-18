@@ -26,6 +26,7 @@
         padding: 10px 0;
 
         .projects {
+
             width: 100%;
             display: flex;
             justify-content: space-around;
@@ -44,7 +45,7 @@
         }
         .btn {
             @include btn();
-            font-family: 'Josefin Sans', sans-serif;
+            font-family: $titleFontFamily, sans-serif;
             min-width: 140px;
             max-width: 260px;
             background: rgb(12 12 12 / 44%);

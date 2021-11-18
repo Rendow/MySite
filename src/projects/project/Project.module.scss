@@ -3,57 +3,49 @@
 
 
 .project {
-  min-height: 350px;
+  @include flex(flex-start,center,column);
+
+  min-height: 373px;
   width: 220px;
-  margin: 10px;
-  margin-bottom: 62px;
+  margin: 10px 10px 62px 10px;
   padding: 20px;
 
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
   box-shadow: 5px 5px 35px black;
 
   .icon {
+    @include flex(center,center,row);
+    position: relative;
+
     width: 100%;
     height: 180px;
-    //filter: invert(100%);
 
-  //  border-radius: 12px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-
+    &:hover .wrap {
+      opacity: 1;
     }
 
     .wrap {
-      //width: 100%;
+      @include flex(center,center,row);
+      position: absolute;
+      top: -20px;
+      width: 221px;
+      height: 204px;
       opacity: 0;
-
+      background-color: rgba(0, 0, 0, 0.2);
       .btn {
-        @include text('Josefin Sans', 18px, 1.2);
+        @include text($titleFontFamily, 16px, 1.2);
         border: 1px solid white;
         cursor: pointer;
 
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.6);
         height: 46px;
         width: 120px;
         padding-top: 13px;
       }
-
-      &:hover {
-        opacity: 1;
-      }
     }
-
   }
 
   .textWrap {
@@ -62,13 +54,13 @@
     padding: 10px;
 
     .projectTitle {
-      @include text('Josefin Sans', 18px, 1.2);
+      @include text($titleFontFamily, 18px, 1.2);
       letter-spacing: 1px;
       margin: 0 0 5px;
     }
 
     .projectDescr {
-      @include text('Poppins', 12px, 1.8);
+      @include text($secondFontFamily, 12px, 1.8);
       font-weight: 400;
       margin-top: 15px;
     }

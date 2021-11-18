@@ -6,7 +6,8 @@
   justify-content: space-around;
   width: 410px;
   cursor: pointer;
-  @include text($secondFontFamily, 18px, 1);
+  @include text($titleFontFamily, 18px, 1);
+  letter-spacing: 2px;
 
   .active{
     color:$primaryColor ;

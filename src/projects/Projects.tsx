@@ -4,7 +4,10 @@ import Project from "./project/Project";
 import {Title} from "../common/components/Title/Title";
 import socialImg from '../assets/img/soc2.png'
 import todoImg from '../assets/img/tasks.png'
+import todov2 from '../assets/img/todov2.png'
 import exchangeImg from '../assets/img/money-exchange.png'
+import chat from '../assets/img/chat.png'
+import address from '../assets/img/address.png'
 import dashboard from '../assets/img/PinClipart.com_beneficiary-clip-art_1453484.png'
 // @ts-ignore
 import Fade from "react-reveal/Fade";
@@ -27,7 +30,6 @@ function Projects() {
         todo :{
             backgroundImage: `url(${todoImg})`,
             width: '90%',
-            marginLeft: '18px',
         },
         exchange: {
             backgroundImage: `url(${exchangeImg})`,
@@ -39,8 +41,16 @@ function Projects() {
         dashboard :{
             backgroundImage: `url(${dashboard})`,
         },
+        chat :{
+            backgroundImage: `url(${chat})`,
+        },
+        address :{
+            backgroundImage: `url(${address})`,
+        },
+        todov2 :{
+            backgroundImage: `url(${todov2})`,
+        },
     }
-
     const projects = [
         {   id:1,
             style:styles.todo,
@@ -59,16 +69,33 @@ function Projects() {
             style:styles.social,
             href:"https://rendow.github.io/ReactSocial/",
             title:'Social network',
-            description: 'Include WebSocket, Rest API, Class component, Hooks',
+            description: 'Include WebSocket, Rest API, class component, hooks',
         },
         {   id:4,
             style:styles.dashboard,
             href:"https://rendow.github.io/dashboard/",
             title:'Dashboard',
-            description: 'Include Hooks, axios, classnames, react-router-dom, sass',
+            description: 'Test task - dashboard with hooks, axios, classnames, react-router-dom, sass',
+        },
+        {   id:5,
+            style:styles.chat,
+            href:"https://rendow.github.io/ws-chat/",
+            title:'Chat',
+            description: 'Test task - chat with WebSocket, local storage and offline mod (PWA), hooks, sass',
+        },
+        {   id:6,
+            style:styles.address,
+            href:"https://rendow.github.io/the-address-book/",
+            title:'The address book',
+            description: 'Test task - address book with Material UI, Rest API, Thunk, Formik, axios, hooks',
+        },
+        {   id:7,
+            style:styles.todov2,
+            href:"https://rendow.github.io/webinar-todo/",
+            title:'Todolist v2',
+            description: 'Test task - Todolist with Material UI, prettier, husky, immutableJs, TypeScript, drag\'n\'drop, hooks',
         },
     ]
-
     let params = {
         preloadImages: false,
         lazy: true,
@@ -81,12 +108,12 @@ function Projects() {
         centeredSlides:false,
         centerInsufficientSlides:true,
     };
+
     const onClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
         FileSaver.saveAs(
             cv, "Ivan Vilde.pdf")
     }
-
 
     return (
         <section id={'projects'} className={s.projectsBlock}>
@@ -102,7 +129,7 @@ function Projects() {
                             {...params}
                         >
                         {projects.map(prj => {
-                            return <SwiperSlide key={prj.id}   style={{width:'100%'}}>
+                            return <SwiperSlide key={prj.id}  style={{width:'100%'}}>
                                 <Project
                                 href={prj.href}
                                 style={prj.style}

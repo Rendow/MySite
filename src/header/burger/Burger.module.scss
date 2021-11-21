@@ -25,9 +25,9 @@
 
   .show {
     transform: translate(0, 0);
-    height: 150px;
+    height: 275px;
     cursor: pointer;
-    @include text($titleFontFamily, 18px, 1);
+    @include text($titleFontFamily, 28px, 1.2);
     letter-spacing: 2px;
   }
 

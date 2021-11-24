@@ -1,85 +1,163 @@
 @import '../../common/styles/variables';
 @import '../../common/styles/mixins';
 
-
-.nav {
+.header {
+  @media screen and (max-width: 650px) {
+    justify-content: center;
+    padding-right: 0;
+  }
+  height: 60px;
+  font-weight: 800;
   width: 100%;
-  height: 100%;
-  padding: 10px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $backgroundColor;
 
-  .navItems {
-    background-color: $backgroundColor;
-    position: absolute;
-    display: flex;
-    height: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    right: 0;
-    left: 0;
-    top: 0;
-    transform: translate(0, -150px);
-    transition: 0.5s;
-    padding: 10px 0;
-  }
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 6;
+  transition: all 0.4s ease 0s;
 
-  .show {
-    transform: translate(0, 0);
-    height: 275px;
-    cursor: pointer;
-    @include text($titleFontFamily, 28px, 1.2);
-    letter-spacing: 2px;
-  }
+  .nav {
+    background: $backgroundColor;
+    @include text($titleFontFamily, 20px, 1.2);
 
-  .burgerBtn {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 16px;
-    right: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    .navItems {
+      @media screen and (max-width: 540px) {
+          display: none;
+      }
+      transition: all 0.4s ease 0s;
+      z-index: 6;
+      position: absolute;
+      display: flex;
+      height: 60px;
+      width: 500px;
+      align-items: center;
+      justify-content: space-around;
 
-    .burgerBtnItem {
-      margin-top: 5px;
-      height: 3px;
-      width: 25px;
-      background-color: $primaryColor;
+      right: 9%;
+      top: -2px;
       transition: 0.5s;
+      padding: 10px 0;
+    }
+    .menu {
+      z-index: 7;
+      position: fixed;
+      width: 300px;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      transition: all 0.3s ease 0s;
+      transform: translateX(130%);
+    }
+
+    .menuActive {
+      z-index: 7;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      transition: all 0.4s ease 0s;
 
     }
 
-    .close {
+
+    .menuContent {
+      width: 300px;
+      z-index: 7;
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+      background: #202020 none repeat scroll 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.4s;
+
+      .menuHeader {
+        padding: 70px  0;
+        border-bottom: 1px solid white;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+
+      .items {
+        width: 100%;
+        font-size: 1.5rem;
+        color: white;
+        padding-top: 30px ;
+        .link {
+          display: block;
+          padding: 13px 0;
+          text-decoration: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+        }
+      }
+    }
+
+    .burgerBtn {
+      z-index: 9;
       position: absolute;
-      top: 25px;
-      right: 10px;
       width: 30px;
       height: 30px;
-      transition: 0.5s;
+      top: 12px;
+      right: 13px;
+      cursor: pointer;
 
-      &:hover {
-        opacity: 1;
-      }
-
-      &:before, &:after {
-        position: absolute;
-        right: 10px;
-        top: -25px;
-        content: ' ';
-        height: 33px;
-        width: 2px;
+      .burgerBtnItem {
+        margin-top: 5px;
+        height: 3px;
+        width: 25px;
         background-color: $primaryColor;
+        transition: 0.5s;
+
       }
 
-      &:before {
-        transform: rotate(45deg);
-      }
+      .close {
+        z-index: 9;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        transition: 0.5s;
 
-      &:after {
-        transform: rotate(-45deg);
+        &:hover {
+          opacity: 1;
+        }
+
+        &:before, &:after {
+          position: absolute;
+          right: 10px;
+          top: -25px;
+          content: ' ';
+          height: 33px;
+          width: 2px;
+          background-color: $primaryColor;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
       }
     }
-  }
-
-  @media screen and (min-width: 400px) {
-    display: none;
   }
 }

@@ -3,21 +3,24 @@ import s from './Nav.module.scss';
 //@ts-ignore
 import { Link, animateScroll as scroll } from "react-scroll";
 
-function Nav() {
+export const Nav = () => {
     return (
-        <nav className={s.nav}>
+        <>
             <LinkWrapper id={'main'}/>
             <LinkWrapper id={'Technology'}/>
             <LinkWrapper id={'projects'}/>
             <LinkWrapper id={'contacts'}/>
-        </nav>
+        </>
     );
 }
-export const LinkWrapper = ({id}: { id: string }) => {
 
+
+
+export const LinkWrapper = ({id}: { id: string }) => {
  let title = id.charAt(0).toUpperCase() + id.slice(1)
 
     return <Link
+        className={s.link}
         activeClass={s.active}
         spy={true}
         smooth={true}

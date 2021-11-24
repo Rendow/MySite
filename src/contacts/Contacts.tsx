@@ -49,7 +49,6 @@ function Contacts() {
 
     return (
         <section id={'contacts'} className={s.wrap}>
-            <Fade bottom reset={true}>
                 <div className={s.main}>
                     <Title title={'Contacts'}/>
                     <form className={s.form} onSubmit={handleSubmit}>
@@ -60,7 +59,6 @@ function Contacts() {
                         <button disabled={disableBtn} type={'submit'} className={btnClass}> Send message</button>
                     </form>
                 </div>
-            </Fade>
         </section>
     );
 }

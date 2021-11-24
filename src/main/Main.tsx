@@ -13,7 +13,6 @@ function Main() {
     return (
         <main id={'main'} className={s.main}>
             <Particles className={s.particlesWrap}  params={particlesOptHover}/>
-            <Fade reset={true} bottom>
             <div className={s.wrap}>
                 <div className={s.greeting}>
                     <ReactTypingEffect speed={100} text={'Hello There!'}/>
@@ -26,7 +25,6 @@ function Main() {
                 </div>
                     </Tilt>
             </div>
-            </Fade>
         </main>
     );
 }

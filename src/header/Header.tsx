@@ -5,10 +5,10 @@ import Burger from "./burger/Burger";
 
 function Header() {
     return (
-        <header className={s.header}>
+        // <header className={s.header}>
+        //     <Burger />
+        // </header>
             <Burger />
-            <Nav/>
-        </header>
     );
 }
 

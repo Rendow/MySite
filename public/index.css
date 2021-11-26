@@ -1,0 +1,4 @@
+@font-face {
+    font-family: 'Streetbrush';
+    src: local('Streetbrush'), url(./fonts/Streetbrush.otf) format('opentype');
+}

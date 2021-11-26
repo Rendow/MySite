@@ -37,10 +37,8 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
       .name {
         @include text($titleFontFamily, 55px, 2);
-
         span {
           display: inline-block;
           position: relative;

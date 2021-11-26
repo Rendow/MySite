@@ -16,7 +16,8 @@
         height: 200px;
         padding-bottom: 20px;
         .text {
-            margin: 15px 0 0;
+           margin-bottom: 15px;
+            font-size: 40px;
         }
         .links {
             display: flex;
@@ -29,7 +30,9 @@
             }
         }
         pre{
-            @include text($secondFontFamily,10px,1)
+            @include text($secondFontFamily,20px,1);
+            font-family: $streetBrushFont, sans-serif;
+
         }
     }
 }

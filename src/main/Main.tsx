@@ -15,7 +15,7 @@ function Main() {
             <Particles className={s.particlesWrap}  params={particlesOptHover}/>
             <div className={s.wrap}>
                 <div className={s.greeting}>
-                    <ReactTypingEffect speed={100} text={'Hello There!'}/>
+                    <ReactTypingEffect  cursorClassName={s.cursor}  speed={100} text={'Hello There! '}/>
                     <span className={s.name}> I am Ivan  <span> Vilde</span></span>
                     <span> Frontend developer</span>
                 </div>

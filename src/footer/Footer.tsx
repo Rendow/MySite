@@ -12,7 +12,7 @@ function Footer() {
         <footer className={s.wrap}>
             <div className={s.main}>
                 <span className={s.text}>
-                    <Title title={'Ivan Vilde'}/>
+                    <Title style={{fontSize:'40px'}} title={'Ivan Vilde'}/>
                 </span>
                 <div className={s.links}>
                     <a href="https://telegram.im/@Reendom">
@@ -31,7 +31,7 @@ function Footer() {
                     </a>
 
                 </div>
-                <pre>&#169; <ReactTypingEffect speed={200} text={`all rights not reserved`}/> </pre>
+                <pre style={{marginTop:"10px"}}>&#169; all rights not reserved </pre>
             </div>
         </footer>
     );

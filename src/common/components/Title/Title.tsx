@@ -3,10 +3,11 @@ import s from './Title.module.scss';
 
 type TitleType = {
     title:string | JSX.Element
+    style?:{fontSize?:string}
 }
 
 export function Title(props:TitleType) {
-    return   <div className={s.title}>
-                    <h2> {props.title}</h2>
+    return   <div style={props.style} className={s.title}>
+                    <span> {props.title}</span>
                 </div>
 }

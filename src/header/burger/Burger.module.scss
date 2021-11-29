@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: flex-end;
   background-color: $backgroundColor;
+  box-shadow: 0 0 10px;
 
   top: 0;
   right: 0;
@@ -81,6 +82,7 @@
 
       height: 100%;
       background: #202020 none repeat scroll 0 0;
+      box-shadow: 5px 0 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -91,12 +93,14 @@
         border-bottom: 1px solid white;
         width: 100%;
         text-transform: uppercase;
-        font-size: 50px;
+
+        @include text($titleFontFamily, 45px, 1);
       }
 
       .items {
         width: 100%;
         font-size: 30px;
+        line-height: 1.8;
         color: white;
         padding-top: 30px ;
         .link {

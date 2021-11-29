@@ -23,11 +23,11 @@ import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
 import SwiperCore, {Navigation, Pagination} from "swiper";
 
-SwiperCore.use([Navigation,Pagination]);
+SwiperCore.use([Navigation, Pagination]);
 
 function Projects() {
     const styles = {
-        todo :{
+        todo: {
             backgroundImage: `url(${todoImg})`,
             width: '90%',
         },
@@ -35,64 +35,71 @@ function Projects() {
             backgroundImage: `url(${exchangeImg})`,
             width: '90%',
         },
-         social :{
+        social: {
             backgroundImage: `url(${socialImg})`,
         },
-        dashboard :{
+        dashboard: {
             backgroundImage: `url(${dashboard})`,
         },
-        chat :{
+        chat: {
             backgroundImage: `url(${chat})`,
         },
-        address :{
+        address: {
             backgroundImage: `url(${address})`,
         },
-        todov2 :{
+        todov2: {
             backgroundImage: `url(${todov2})`,
         },
     }
     const projects = [
-        {   id:1,
-            style:styles.todo,
-            href:"https://rendow.github.io/TodoList/",
-            title:'Todolist',
+        {
+            id: 1,
+            style: styles.todo,
+            href: "https://rendow.github.io/TodoList/",
+            title: 'Todolist',
             description: 'Include React, Redux, TypeScript, Material UI, Rest API, Thunk, Formik',
         },
-        {   id:2,
-            style:styles.social,
-            href:"https://rendow.github.io/ReactSocial/",
-            title:'Social network',
+        {
+            id: 2,
+            style: styles.social,
+            href: "https://rendow.github.io/ReactSocial/",
+            title: 'Social network',
             description: 'Include React, Redux, TypeScript, WebSocket, Rest API, class component, hooks',
         },
-        {   id:3,
-            style:styles.exchange,
-            href:"https://rendow.github.io/CurrencyExchange/",
-            title:'Exchanger',
+        {
+            id: 3,
+            style: styles.exchange,
+            href: "https://rendow.github.io/CurrencyExchange/",
+            title: 'Exchanger',
             description: 'Include React, Redux, TypeScript',
 
         },
-        {   id:4,
-            style:styles.dashboard,
-            href:"https://rendow.github.io/dashboard/",
-            title:'Dashboard',
+        {
+            id: 4,
+            style: styles.dashboard,
+            href: "https://rendow.github.io/dashboard/",
+            title: 'Dashboard',
             description: 'Test task - dashboard with hooks, axios, classnames, react-router-dom, sass',
         },
-        {   id:5,
-            style:styles.chat,
-            href:"https://rendow.github.io/ws-chat/",
-            title:'Chat',
+        {
+            id: 5,
+            style: styles.chat,
+            href: "https://rendow.github.io/ws-chat/",
+            title: 'Chat',
             description: 'Test task - chat with WebSocket, local storage and offline mod (PWA), hooks, sass',
         },
-        {   id:6,
-            style:styles.address,
-            href:"https://rendow.github.io/the-address-book/",
-            title:'The address book',
+        {
+            id: 6,
+            style: styles.address,
+            href: "https://rendow.github.io/the-address-book/",
+            title: 'The address book',
             description: 'Test task - address book with Material UI, Rest API, Thunk, Formik, axios, hooks',
         },
-        {   id:7,
-            style:styles.todov2,
-            href:"https://rendow.github.io/webinar-todo/",
-            title:'Todolist v2',
+        {
+            id: 7,
+            style: styles.todov2,
+            href: "https://rendow.github.io/webinar-todo/",
+            title: 'Todolist v2',
             description: 'Test task - Todolist with Material UI, prettier, husky, immutableJs, TypeScript, drag\'n\'drop, hooks',
         },
     ]
@@ -103,10 +110,10 @@ function Projects() {
         navigation: true,
         loop: false,
         spaceBetween: 5,
-        slidesPerView:1,
-        breakpoints:{820:{slidesPerView:2}},
-        centeredSlides:false,
-        centerInsufficientSlides:true,
+        slidesPerView: 1,
+        breakpoints: {820: {slidesPerView: 2}},
+        centeredSlides: false,
+        centerInsufficientSlides: true,
     };
 
     const onClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -117,32 +124,32 @@ function Projects() {
 
     return (
         <section id={'projects'} className={s.projectsBlock}>
-            <Particles className={s.particlesWrap}    params={particlesOptClick} />
+            <Particles className={s.particlesWrap} params={particlesOptClick}/>
 
-            <Fade bottom reset={true}>
-                <div className={s.projectsContainer}>
-                    <Title title={'Projects'}/>
 
+            <div className={s.projectsContainer}>
+                <Title title={'Projects'}/>
+                <Fade bottom reset={true}>
                     <div className={s.projects}>
                         <Swiper
                             className={s.swiper}
                             {...params}
                         >
-                        {projects.map(prj => {
-                            return <SwiperSlide key={prj.id}  style={{width:'100%'}}>
-                                <Project
-                                href={prj.href}
-                                style={prj.style}
-                                title={prj.title}
-                                description={prj.description}/>
-                            </SwiperSlide>
-                        })}
+                            {projects.map(prj => {
+                                return <SwiperSlide key={prj.id} style={{width: '100%'}}>
+                                    <Project
+                                        href={prj.href}
+                                        style={prj.style}
+                                        title={prj.title}
+                                        description={prj.description}/>
+                                </SwiperSlide>
+                            })}
                         </Swiper>
                     </div>
-                    <button  onClick={onClickHandler} className={s.btn}>download cv</button>
+                    <button onClick={onClickHandler} className={s.btn}>download cv</button>
+                </Fade>
+            </div>
 
-                </div>
-            </Fade>
         </section>
     );
 }

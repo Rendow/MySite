@@ -66,8 +66,8 @@ const skills = [{
     return (
         <section id={'Technology'} className={s.skillsBlock}>
             <div className={s.skillsContainer}>
+                <Title title={'Technology'}/>
                 <Fade bottom reset={true}>
-                    <Title title={'Technology'}/>
                     <div className={s.wrapper}>
                         <div className={s.skills}>
                             {skills.map(i => {

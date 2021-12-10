@@ -2,3 +2,15 @@
 .App {
   text-align: center;
 }
+
+.swiper-button-prev::after {
+  color: #A079F6;
+}
+
+.swiper-button-next::after {
+  color: #A079F6;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active{
+  background-color: #A079F6;
+}

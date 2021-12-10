@@ -25,7 +25,7 @@
 
   .nav {
     background: $backgroundColor;
-    @include text($streetBrushFont, 25px, 1.2);
+    @include text($streetBrushFont, 22px, 1.2);
     letter-spacing: 6px;
     width: 100%;
     height: 100%;
@@ -43,8 +43,8 @@
       align-items: center;
       justify-content: space-around;
 
-      right: 9%;
-      top: -2px;
+      left: 2%;
+      top: -0;
       transition: 0.5s;
       padding: 10px 0;
     }
@@ -94,12 +94,12 @@
         width: 100%;
         text-transform: uppercase;
 
-        @include text($titleFontFamily, 45px, 1);
+        @include text($titleFontFamily, 40px, 1);
       }
 
       .items {
         width: 100%;
-        font-size: 30px;
+        font-size: 25px;
         line-height: 1.8;
         color: white;
         padding-top: 30px ;

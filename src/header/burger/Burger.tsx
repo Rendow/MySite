@@ -16,7 +16,7 @@ function Burger() {
     return (
         <header onClick={toggleModal} style={{height: open ? '0' : '60px'}} className={s.header}>
         <nav className={s.nav} >
-            <div className={ s.navItems } style={{top: open ? '-160px' : '-2px'}}>
+            <div className={ s.navItems } style={{top: open ? '-160px' : '2px'}}>
                 <Nav/>
             </div>
                 <div  className={`${open ? s.menuActive : s.menu}`}>

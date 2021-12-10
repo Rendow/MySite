@@ -8,26 +8,32 @@ type ProjectPropsType = {
     title: string
     description: string
     style?:{ backgroundImage:string, filter?:string, width?:string}
-    href:string
+    demo:string
+    code:string
+    projectType?:string
 }
 
 function Project(props: ProjectPropsType) {
-    const onClickHandler = () => {
-        let win = window.open(props.href, '_blank');
-        win && win.focus();
+
+    const onNavClick = (href:string) => {
+        return () => {
+            let win = window.open(href, '_blank');
+            win && win.focus();
+        }
     }
     return (
         <div className={s.project}>
                 <div style={props.style} className={s.icon}>
                     <div className={s.wrap}>
-                        <a className={s.btn} onClick={onClickHandler}>
-                            DEMO </a>
+                        <a className={s.btn} onClick={onNavClick(props.demo)}>DEMO </a>
+                        <a className={s.btn} onClick={onNavClick(props.code)}>CODE </a>
                     </div>
                 </div>
 
             <div className={s.textWrap}>
                 <span className={s.projectTitle}>
-                   {props.title}
+                      {props.title}
+                    <p>{props.projectType}</p>
                 </span>
                 <div className={s.projectDescr}>
                     {props.description}

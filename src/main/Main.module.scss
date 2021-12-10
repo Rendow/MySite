@@ -71,7 +71,7 @@
         height: 400px;
         background: url("../assets/img/photo.jpg") no-repeat;
         background-size: cover;
-
+        filter: grayscale(0.3);
         &::before {
           @media screen and (max-width: 400px) {
             left: 0px;

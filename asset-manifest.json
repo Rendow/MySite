@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c50760c7.chunk.css",
-    "main.js": "/Portfolio/static/js/main.d10ce74c.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.d10ce74c.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.58692c0d.chunk.css",
+    "main.js": "/Portfolio/static/js/main.fe160804.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.fe160804.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.11eba3de.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.11eba3de.js.map",
     "static/css/2.8abfaff6.chunk.css": "/Portfolio/static/css/2.8abfaff6.chunk.css",
-    "static/js/2.ba95bd1d.chunk.js": "/Portfolio/static/js/2.ba95bd1d.chunk.js",
-    "static/js/2.ba95bd1d.chunk.js.map": "/Portfolio/static/js/2.ba95bd1d.chunk.js.map",
+    "static/js/2.7b0655ef.chunk.js": "/Portfolio/static/js/2.7b0655ef.chunk.js",
+    "static/js/2.7b0655ef.chunk.js.map": "/Portfolio/static/js/2.7b0655ef.chunk.js.map",
     "index.html": "/Portfolio/index.html",
     "static/css/2.8abfaff6.chunk.css.map": "/Portfolio/static/css/2.8abfaff6.chunk.css.map",
-    "static/css/main.c50760c7.chunk.css.map": "/Portfolio/static/css/main.c50760c7.chunk.css.map",
-    "static/js/2.ba95bd1d.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.ba95bd1d.chunk.js.LICENSE.txt",
+    "static/css/main.58692c0d.chunk.css.map": "/Portfolio/static/css/main.58692c0d.chunk.css.map",
+    "static/js/2.7b0655ef.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.7b0655ef.chunk.js.LICENSE.txt",
     "static/media/PinClipart.com_beneficiary-clip-art_1453484.a88ff9f9.png": "/Portfolio/static/media/PinClipart.com_beneficiary-clip-art_1453484.a88ff9f9.png",
     "static/media/address.e48ba23f.png": "/Portfolio/static/media/address.e48ba23f.png",
-    "static/media/cv.3246c937.pdf": "/Portfolio/static/media/cv.3246c937.pdf",
+    "static/media/cv.4d33898e.pdf": "/Portfolio/static/media/cv.4d33898e.pdf",
     "static/media/library.ee66161a.svg": "/Portfolio/static/media/library.ee66161a.svg",
     "static/media/money-exchange.9652dd6f.png": "/Portfolio/static/media/money-exchange.9652dd6f.png",
     "static/media/Main.module.scss": "/Portfolio/static/media/photo.a81acb53.jpg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.11eba3de.js",
     "static/css/2.8abfaff6.chunk.css",
-    "static/js/2.ba95bd1d.chunk.js",
-    "static/css/main.c50760c7.chunk.css",
-    "static/js/main.d10ce74c.chunk.js"
+    "static/js/2.7b0655ef.chunk.js",
+    "static/css/main.58692c0d.chunk.css",
+    "static/js/main.fe160804.chunk.js"
   ]
 }
